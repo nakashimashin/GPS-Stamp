@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  gps-stamp-frontend:
+    container_name: "gps-stamp-frontend"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    command: ["npm", "run", "dev"]
