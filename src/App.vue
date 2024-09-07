@@ -7,6 +7,7 @@ import Test from '@/components/Test.vue';
 		<Test />
 		<div>aaa</div>
 		<div>bbb</div>
+		<div>ccc</div>
 	</div>
 </template>
 
