@@ -1,13 +1,18 @@
 import path from 'path';
 
 const buildEslintCommand = (filenames) =>
-	`next lint --fix --file ${filenames
-		.map((f) => path.relative(process.cwd(), f))
-		.join(' --file ')}`;
+	`eslint --fix ${filenames
+		.map((f) => `"${path.relative(process.cwd(), f)}"`)
+		.join(' ')}`;
+
+const buildPrettierCommand = (filenames) =>
+	`prettier --write ${filenames
+		.map((f) => `"${path.relative(process.cwd(), f)}"`)
+		.join(' ')}`;
 
 export default {
-	'*.ts': [
-		buildEslintCommand,
-		"prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx}'",
+	'*.{js,jsx,ts,tsx,vue}': (filenames) => [
+		buildEslintCommand(filenames),
+		buildPrettierCommand(filenames),
 	],
 };
