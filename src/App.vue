@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import Test from '@/components/Test.vue';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+	console.log('App mounted');
+
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition((position) => {
+			console.log('Latitude: ' + position.coords.latitude);
+			console.log('Longitude: ' + position.coords.longitude);
+		});
+	}
+});
 </script>
 
 <template>
