@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "vue-router": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.10.0",
+    "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^5.1.2",
     "eslint": "^9.10.0",
     "eslint-plugin-vue": "^9.28.0",

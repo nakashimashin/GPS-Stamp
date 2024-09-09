@@ -72,6 +72,7 @@ const calculateDistanceUsingHaversine = (
 
 <template>
 	<div>
+		<router-view />
 		<Test />
 		<div>aaa</div>
 		<div>bbb</div>

@@ -8,7 +8,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"]
-		}
+		},
+		"types": ["vue-router"]
 	},
 	"lib": ["ES6"],
 	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
